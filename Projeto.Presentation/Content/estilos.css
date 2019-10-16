@@ -1,0 +1,38 @@
+.btn-somar{
+	background-color: #74e07e;
+	width: 170px;
+	border-style: none;
+	height: 50px;
+	font-family: arial;
+	font-size: 14px;
+	color: white;
+	
+}
+.btn-somar:hover{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	cursor: pointer;
+}
+
+.frm{
+	width: 300px;
+}
+.frm input{
+	width: 100%;
+}
+#lblTexto{
+	width: 100%;
+	background-color: whitesmoke;
+	text-align: center;
+	}
+#lblTextoBin{
+	width: 100%;
+	background-color: whitesmoke;
+	text-align: center;
+	}
+
+label{
+font-style: normal;
+text-shadow: whitesmoke 1px 1px 1px;
+color:mediumseagreen;
+
+}

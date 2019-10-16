@@ -1,0 +1,67 @@
+﻿@model List<Projeto.Presentation.Models.FornecedorConsultaViewModel>
+
+@{
+    ViewBag.Title = "Consulta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Consulta de Fornecedores</h4>
+Listagem de fornecedores cadastrados no sistema:
+<br />
+<br />
+
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success">
+        <strong>@TempData["Mensagem"]</strong>
+    </div>
+}
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>CNPJ</th>
+            <th>Telefone</th>
+            <th>Endereço</th>
+            <th>Operações</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @item.IdFornecedor </td>
+                <td> @item.Nome </td>
+                <td> @item.Email </td>
+                <td> @item.Cnpj </td>
+                <td> @item.Telefone </td>
+                <td> @item.Endereco </td>
+                <td>
+                    <a href="/Fornecedor/Edicao/@item.IdFornecedor"
+                       class="btn btn-primary btn-sm">Atualizar</a>
+
+                    <a href="/Fornecedor/Exclusao/@item.IdFornecedor"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirm('Deseja excluir o fornecedor @item.Nome?');">
+                        Excluir
+                    </a>
+                </td>
+            </tr>
+        }
+
+        
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                Quantidade de fornecedores cadastrados: @Model.Count
+            </td>
+        </tr>
+    </tfoot>
+</table>
+

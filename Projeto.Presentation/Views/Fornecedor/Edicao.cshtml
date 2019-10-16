@@ -1,0 +1,60 @@
+﻿@model Projeto.Presentation.Models.FornecedorEdicaoViewModel
+@{
+    ViewBag.Title = "Edicao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edicao de Fornecedor</h2>
+
+@using (Html.BeginForm("AtualizarFornecedor", "Fornecedor", FormMethod.Post))
+{
+
+    <label>Código do Fornecedor:</label>
+    @Html.TextBoxFor(model => model.IdFornecedor,
+        new { @class = "form-control col-md-4", @readonly = "readonly" })
+    <br />
+
+    <label>Nome:</label>
+    @Html.TextBoxFor(model => model.Nome,
+            new { @class = "form-control col-md-4", placeholder = "Digite aqui" })
+    <div class="text-danger">
+        @Html.ValidationMessageFor(model => model.Nome)
+    </div>
+    <br />
+    <label>Email:</label>
+    @Html.TextBoxFor(model => model.Email,
+            new { @class = "form-control col-md-4", placeholder = "Digite aqui" })
+    <div class="text-danger">
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+    <br />
+  
+    <label>Telefone:</label>
+    @Html.TextBoxFor(model => model.Telefone,
+            new { @class = "form-control col-md-4", placeholder = "Digite aqui" })
+    <div class="text-danger">
+        @Html.ValidationMessageFor(model => model.Telefone)
+    </div>
+    <br />
+    <label>CNPJ:</label>
+    @Html.TextBoxFor(model => model.CNPJ,
+            new { @class = "form-control col-md-4", placeholder = "Digite aqui" })
+    <div class="text-danger">
+        @Html.ValidationMessageFor(model => model.CNPJ)
+    </div>
+    <br />
+    <label>Endereço:</label>
+    @Html.TextBoxFor(model => model.Endereco,
+            new { @class = "form-control col-md-4", placeholder = "Digite aqui" })
+    <div class="text-danger">
+        @Html.ValidationMessageFor(model => model.Endereco)
+    </div>
+    <br />
+
+    <input type="submit" value="Atualizar fornecedor"
+           class="btn btn-primary" />
+    <br />
+    <br />
+
+    <strong>@ViewBag.Mensagem</strong>
+}

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+
+<div class=" w3l-login-form">
+    <h1>SeboGuest</h1>
+    <form action="Verificar" method="POST">
+
+        <div class=" w3l-form-group">
+            <label>Usuário:</label>
+            <div class="group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="Nome"  class="form-control" placeholder="Usuário" required="required" />
+            </div>
+        </div>
+        <div class=" w3l-form-group">
+            <label>Senha:</label>
+            <div class="group">
+                <i class="fas fa-unlock"></i>
+                <input type="password" name="Senha"  class="form-control" placeholder="Senha" required="required" />
+            </div>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+    
+</div>
+<footer>
+    <p class="copyright-agileinfo"> SeboGuest - Sistema de gestão integrado</p>
+</footer>

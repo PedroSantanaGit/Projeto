@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Seja bem vindo ao Sistema</h4>
+<br />
+<center>
+
+<div class="form-group">
+    <label for="Nome">Informe seu nome:</label><br>
+    <input type="text" id="Nome"><br>
+    <label for="comment">Insira uma observação:</label>
+    <textarea class="form-control w-25" rows="5" id="comment" style="resize:none"></textarea>
+</div>
+
+<div class="Comentario" id="Comentario"></div>
+<input type="button" onclick="AdicionarComentario()" class="btnAdd" value="Adicionar observação">
+<input type="button" onclick="ExcluirComentario()" class="btnAdd" value="Excluir observação">
+<input type="button" onclick="EditarComentario()" class="btnAdd" value="Editar observação">
+
+	</center>
+
+
+

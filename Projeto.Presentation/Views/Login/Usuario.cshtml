@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<h1>Material Login Form</h1>
+<div class=" w3l-login-form">
+    <h2>Login Here</h2>
+    <form action="Verificar" method="POST">
+
+        <div class=" w3l-form-group">
+            <label>Usuário:</label>
+            <div class="group">
+                <i class="fas fa-user"></i>
+                <input type="text" class="form-control" placeholder="Nome de usuário" required="required" />
+            </div>
+        </div>
+        <div class=" w3l-form-group">
+            <label>Senha:</label>
+            <div class="group">
+                <i class="fas fa-unlock"></i>
+                <input type="password" class="form-control" placeholder="Senha" required="required" />
+            </div>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</div>
